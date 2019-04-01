@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
          has_many :attendances, foreign_key: 'guest_id'
          has_many :events, foreign_key: 'admin_id'
-         has_many :subscription, foreign_key: 'admin_id'
+         has_one :subscription, foreign_key: 'admin_id'
 
         #  validates :first_name,
         #    presence: true
