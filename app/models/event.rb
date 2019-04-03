@@ -1,15 +1,15 @@
 class Event < ApplicationRecord
-    has_one_attached :picture
-    has_many :attendances, dependent: :delete_all
-    belongs_to :admin, class_name: "User"
+  # has_one_attached :picture
+  has_many :attendances, dependent: :delete_all
+  belongs_to :admin, class_name: "User"
 
-    before_save :send_mail_validation, if: :will_save_change_to_is_validate?
-
-    validates :duration,
-    prensence: true,
+  # before_save :send_mail_validation, if: :will_save_change_to_is_validate?
+  
+  validates :duration, 
+    presence: true,
     numericality: { greater_than_or_equal_to: 5 }
 
-    validates :title,
+  validates :title,
     presence: true,
     length: { in: 5..140}
   validates :description,
