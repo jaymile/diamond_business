@@ -33,5 +33,5 @@ Event.create(start_date: Faker::Date.forward(20), duration: 30, title: Faker::Bo
 
 
 20.times do 
-  Attendance.create(stripe_customer_id: rand(1000..9999), guest_id:User.first, event_id: Event.first)
+  Attendance.create(stripe_customer_id:"azerty", guest:User.all.sample, event: Event.all.sample)
 end

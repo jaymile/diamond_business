@@ -68,3 +68,4 @@ gem 'mini_magick'
 group :production do 
   gem 'faker'
 end
+  gem 'table_print'
