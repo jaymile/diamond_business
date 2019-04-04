@@ -60,3 +60,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'dotenv-rails'
+gem 'devise'
+gem 'rails-erd'
+gem 'stripe'
+gem 'mini_magick'
+group :production do 
+  gem 'faker'
+end
+  gem 'table_print'
